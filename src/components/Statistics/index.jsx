@@ -1,9 +1,12 @@
-const Statistics = ({good, neutral, bad}) => (
-  <div className="statistic">
-    <h2 className="header">Statistics</h2>
+import style from './Statistics.module.css'
+
+const Statistics = ({good, neutral, bad, total, positivePercentage}) => (
+  <div className={style.div}>
     <p>Good: {good}</p>
     <p>Neutral: {neutral}</p>
     <p>Bad: {bad}</p>
+    <p>Total: {total}</p>
+    <p>Positive feedback: {positivePercentage}</p>
   </div>
 )
 

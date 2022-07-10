@@ -1,16 +1,19 @@
-const Feedback = ({names, setValues}) => {
+import { Button } from "@mui/material"
+import {ButtonGroup} from "@mui/material"
+
+const Feedback = ({options, onLeaveFeedback}) => {
 
   return (
-    <div className="feedback">
-      <h2 className="header">Please leave feedback</h2>
-      {names.map( name => (
-        <button
-          className="button"
-          onClick={() => setValues(name)}
+    <div>
+      <ButtonGroup variant="contained">
+      {options.map( name => (
+        <Button
+          onClick={() => onLeaveFeedback(name)}
           key={name} 
           type="button">
             {name}
-        </button>) )}
+        </Button>) )}
+      </ButtonGroup>
     </div>
   )
 }
