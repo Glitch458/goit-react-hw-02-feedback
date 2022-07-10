@@ -1,5 +1,6 @@
 import { Button } from "@mui/material"
 import {ButtonGroup} from "@mui/material"
+import PropTypes from 'prop-types'
 
 const Feedback = ({options, onLeaveFeedback}) => {
 
@@ -16,6 +17,11 @@ const Feedback = ({options, onLeaveFeedback}) => {
       </ButtonGroup>
     </div>
   )
+}
+
+Feedback.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string.isReqired),
+  onLeaveFeedback: PropTypes.func.isRequired
 }
 
 export default Feedback
